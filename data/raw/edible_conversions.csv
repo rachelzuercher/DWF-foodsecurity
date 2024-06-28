@@ -1,0 +1,185 @@
+﻿stock,edible_conversion,source
+Dolphinfishes,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Skipjack tuna,0.66,Aquatic Food Composition Database (AFCD)
+Yellowfin tuna,0.58,Farmery et al. 2020
+Bigeye tuna,0.58,Farmery et al. 2020
+Common dolphinfish,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Tunas. bonitos. billfishes,0.58,Farmery et al. 2020
+Sardinellas,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Bullet tuna,0.58,Farmery et al. 2020; Aquatic Food Composition Database (AFCD)
+West African Spanish mackerel,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Basses. groupers. hinds,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Jacks. pompanos,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Threadfins,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Mackerels. tunas. bonitos,0.58,Farmery et al. 2020
+Anchovies. round herrings,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Cuttlefishes,0.67,Bianchi et al. 2022
+Slipmouths. ponyfishes,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Threadfins. whiptail breams,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Butterfishes,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Sergestid shrimp,0.38,Edwards et al. 2019 + Tacon & Metian 2013
+Longtail tuna,0.58,Farmery et al. 2020
+Torpedo scad,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Black pomfret,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Dorab wolf-herring,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Common pencil squids,0.67,Bianchi et al. 2022
+Venus clams,0.17,Edwards et al. 2019 + Tacon & Metian 2013
+Upeneid goatfishes,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Kawakawa,0.58,Farmery et al. 2020; Aquatic Food Composition Database (AFCD)
+Indian mackerel,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Thryssas,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Albacore,0.58,Farmery et al. 2020
+Chilean jack mackerel,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Jumbo flying squid,0.69,"IMARPE and ITP. (1996). Compendio biológico tecnológico de las principales especies hidrobiológicas comerciales del Perú. Instituto del Mar del Perú, Instituto Tecnológico Pesquero. Callao–Perú. https://repositorio.imarpe.gob.pe/handle/20.500.12958/1387"
+Swordfish,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Squat Lobster,0.38,Edwards et al. 2019 + Tacon & Metian 2013
+Drums. croakers,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Pacific chub mackerel,0.57,Bianchi et al. 2022
+Largehead hairtail,0.59,Bianchi et al. 2022
+Senegalese hake,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Clams. seasnails. squids. octopuses,0.67,Bianchi et al. 2022
+Threadfin breams,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Daggertooth pike conger,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Blue swimming crab,0.38,Edwards et al. 2019 + Tacon & Metian 2013
+Snappers,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Goatfishes,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Emperors. scavengers,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Narrow-barred Spanish mackerel,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Bigeye scad,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Commercial shrimps and prawns,0.38,Edwards et al. 2019 + Tacon & Metian 2013
+Dolphinfishes (Coryphaena),0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Tunas (Thunnini),0.58,Farmery et al. 2020
+Billfishes (Istiophoridae. Xiphiidae),0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Squids,0.67,Bianchi et al. 2022
+Threadfins (Nemipteridae),0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Jellyfishes,,
+Anchovies,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Shortfin scad,0.62,Briones and Lazaro-Llanos 2015
+Round scads (Decapterus),0.62,Briones and Lazaro-Llanos 2015
+Cuttlefishes (Sepiida),0.67,Bianchi et al. 2022
+Sardinellas (Sardinella),0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Slipmouths. ponyfishes (Leignathidae),0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Threadfins. whiptail breams (Nemipteridae),0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Drums. croakers (Sciaenidae),0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Shrimps and prawns,0.38,Edwards et al. 2019 + Tacon & Metian 2013
+Butterfishes (Stromateidae),0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Cutlassfishes (Trichiuridae),0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Basses. groupers. hinds (Serranidae),0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Mullets. grey mullets (Mugilidae),0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Snappers (Lutjanidae),0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Goatfishes (Mullidae),0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Emperors. scavengers (Lethrinidae),0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Japanese anchovy,0.62,Bianchi et al. 2022
+Atlantic mackerel,0.61,Bianchi et al. 2022
+Giant tiger prawn,0.57,Bianchi et al. 2022
+Gazami crab,0.35,Bianchi et al. 2022
+Benguela hake,0.53,Bianchi et al. 2022
+Barracudas. sennets (Sphyraena),0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Engraulidae,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Threadfins (Polynemidae),0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Porgies. seabreams (Sparidae),0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Pomfrets (Bramidae),0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Grunts+ (Haemulidae),0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Grunts (Haemulidae),0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Cobia,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Parrotfishes (Scaridae),0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Lobsters,0.38,Edwards et al. 2019 + Tacon & Metian 2013
+Pompanos (Trachinotus),0.87,Edwards et al. 2019 + Tacon & Metian 2013
+African croakers,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+African sicklefish,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Akiami paste shrimp,0.38,Edwards et al. 2019 + Tacon & Metian 2013
+Alexandria pompano,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Aquatic invertebrates,0.38,Edwards et al. 2019 + Tacon & Metian 2013
+Atlantic bumper,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Atlantic chub mackerel,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Atlantic horse mackerel,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Atlantic emperor,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Atlantic sailfish,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Atlantic pomfret,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Barracudas,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Barracudas. sennets,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Bigeye grunt,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Billfishes,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Bigfin reef squid,0.67,Bianchi et al. 2022
+Black marlin,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Blue marlin,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Bluefish,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Bobo croaker,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Boe drum,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Bonga shad,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Bullet and frigate tunas,0.58,Farmery et al. 2020
+Cepheid jellyfishes,,
+Canary drum,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Chub mackerels,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Common octopus,0.67,Bianchi et al. 2022
+Common squids,0.67,Bianchi et al. 2022
+Coney,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Crevalle jack,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Crevalles,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Cutlassfishes,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Cuttlefishes. bobtail squids,0.67,Bianchi et al. 2022
+European anchovy,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+European pilchard,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+False scad,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Filefishes,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Flathead grey mullet,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Flatheads,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Frigate tuna,0.66,Farmery et al. 2020; Aquatic Food Composition Database (AFCD)
+Giant African threadfin,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Great barracuda,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Grunters,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Grunts. sweetlips. bonnetmouths,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Guinean tonguesole,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Halfbeaks. garfishes,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Herrings. shads. anchovies,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Indian scad,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Indo-Pacific prawns,0.38,Edwards et al. 2019 + Tacon & Metian 2013
+Jacks. horse mackerels,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Jacks,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Law croaker,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Lesser African threadfin,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Lizardfishes,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Lizardfishes. sauries,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Longneck croaker,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Madeiran sardinella,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Marine crabs. shrimps. lobsters nei,0.38,Edwards et al. 2019 + Tacon & Metian 2013
+Mbizi croaker,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Mojarras. silverbellies,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Monocle breams,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Mullets. grey mullets,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Pacific bluefin tuna,0.58,Farmery et al. 2020
+Pandoras,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Parrotfishes,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Perch-likes,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Pompanos,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Porgies. seabreams,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Red hind,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Red pandora,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Redband parrotfish,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Redspotted shrimp,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Round sardinella,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Scads,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Sea catfishes. coblers,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Seabasses. hinds,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Sepia cuttlefishes,0.67,Bianchi et al. 2022
+Silver pomfrets,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Serra Spanish mackerel,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Smoothmouth sea catfish,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Soles,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Sompat grunt,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Southern pink shrimp,0.38,Edwards et al. 2019 + Tacon & Metian 2013
+Southern rough shrimp,0.38,Edwards et al. 2019 + Tacon & Metian 2013
+Spanish mackerels,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Spiny lobsters,0.38,Edwards et al. 2019 + Tacon & Metian 2013
+Squids. cuttlefishes. octopuses,0.67,Bianchi et al. 2022
+Squilla mantis shrimps,0.38,Edwards et al. 2019 + Tacon & Metian 2013
+Squirrel-. soldierfishes,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Striped marlin,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Subtropical seabreams,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Tonguesoles,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Toothed seabreams,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Triggerfishes,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Volutes,0.67,Bianchi et al. 2022
+West African goatfish,0.87,Edwards et al. 2019 + Tacon & Metian 2013
+Whirlpool swimming crabs,0.38,Edwards et al. 2019 + Tacon & Metian 2013
+Neritic tunas,0.58,Farmery et al. 2020
