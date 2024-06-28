@@ -2,6 +2,8 @@
 # Rachel Zuercher, rzuercher@mbayaq.org
 # Last edited: 27 June 2024
 
+# Run this script prior to 'DWF.plots.R'
+
 # load packages ####
 library(data.table)
 library(stringr) 
@@ -22,7 +24,7 @@ library(ggsankey)
 
 options(scipen=999) #prevent scientific notation  
 
-# Load Sea Around Us catch reconstructions ####
+# load Sea Around Us catch reconstructions ####
 directory <- here::here("data","raw")
 output <- here::here("data","output")
 
@@ -98,7 +100,7 @@ SAU_landings_summary[is.na(SAU_landings_summary)] <- 0
 countries <- unique(SAU_landings_summary$country)
 stocks <- unique(SAU_landings_summary$stock)
 
-# Conversions of total biomass landed to edible weight ####
+# conversions of total biomass landed to edible weight ####
 edible_conversions <- read.csv(here::here(directory, "edible_conversions.csv"))
 SAU_landings_summary <- join(SAU_landings_summary, edible_conversions, by="stock")
 
@@ -110,7 +112,7 @@ SAU_landings_summary$Regional_edible <- SAU_landings_summary$Regional*SAU_landin
 
 rm(edible_conversions)
 
-# Load nutritional content and recommended nutrient intake data ####
+# load nutritional content and recommended nutrient intake data ####
 # Run the 'compile_fish_nutrition_df.R' script to create the following file:
 nutritional_content <- readRDS(here::here(directory, "nutritional_content.rds"))
 

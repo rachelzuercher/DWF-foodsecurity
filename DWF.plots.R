@@ -1,6 +1,8 @@
 # Plots for "Distant water fishing and its effects on domestic nutritional security"
 # Rachel Zuercher, rzuercher@mbayaq.org
-# Last edited: 27 June 2024
+# Last edited: 28 June 2024
+
+# Before creating plots, run all code in 'DWF.case.analysis.R' script
 
 ##### MAIN PAPER ####
 
@@ -322,9 +324,8 @@ ggsave(here::here(output, "Mada_Fig3.pdf"), width = 7, height = 6)
 
 
 # Figure 4. 
-flag.plot <- SAU_landings[!SAU_landings$Fleet=="Domestic",]
-
-ggplot(flag.plot[flag.plot$area_name=="Madagascar" & flag.plot$common_name=="Neritic tunas",], 
+ggplot(SAU_landings[SAU_landings$area_name=="Madagascar" & SAU_landings$common_name=="Neritic tunas" &
+                      !SAU_landings$Fleet=="Domestic",], 
        aes(fill=fishing_entity, y=tonnes, x=year)) + 
   geom_bar(position="stack", stat="identity") +
   xlab("") +
@@ -337,9 +338,8 @@ ggsave(here::here(output, "Mada_Fig4.pdf"), width = 7, height = 5)
 
 
 # Figure 5. 
-sector.plot <- SAU_landings[SAU_landings$Fleet=="Domestic",]
-
-ggplot(sector.plot[sector.plot$area_name=="Madagascar" & sector.plot$common_name=="Neritic tunas",], 
+ggplot(SAU_landings[SAU_landings$area_name=="Madagascar" & SAU_landings$common_name=="Neritic tunas" &
+                     SAU_landings$Fleet=="Domestic",], 
        aes(fill=fishing_sector, y=tonnes, x=year)) + 
   geom_bar(position="stack", stat="identity") +
   xlab("") +
@@ -453,10 +453,9 @@ ggsave(here::here(output, "Mada_Fig7B-2.pdf"), width = 7, height = 1.8)
 # Peru full-length case narrative ####
 
 # Figure 1.
-peru <- SAU_landings[SAU_landings$area_name=="Peru" & SAU_landings$common_name=="Jumbo flying squid", ]
-peru.domestic <- peru[peru$Fleet=="Domestic",]
-
-ggplot(peru.domestic, aes(fill=reporting_status, y=tonnes, x=year)) + 
+ggplot(SAU_landings[SAU_landings$area_name=="Peru" & SAU_landings$common_name=="Jumbo flying squid" &
+                      SAU_landings$Fleet=="Domestic",], 
+       aes(fill=reporting_status, y=tonnes, x=year)) + 
   geom_bar(position="stack", stat="identity") +
   xlab("") +
   ylab("Landings (tonnes)") +
@@ -471,8 +470,8 @@ ggsave(here::here(output, "Peru_Fig1.pdf"), width = 6, height = 6)
 
 # Data: https://comtradeplus.un.org/
 peru_trade <- read.csv(here::here(directory, "comtrade_Peru_squid.csv"), sep=",", quote="", na.strings=c("NA", "", " "), header=TRUE)
-peru_export <- peru_trade[peru_trade$Trade.Flow=="Export",]
-topexport <- aggregate(Netweight..kg.~Partner, data=peru_export, FUN=sum)
+peru_trade <- peru_trade[peru_trade$Trade.Flow=="Export",]
+topexport <- aggregate(Netweight..kg.~Partner, data=peru_trade, FUN=sum)
 
 # gives me the top 6 countries that Peruvian squid is exported to
 ggplot(topexport[!topexport$Partner=="World" & topexport$Netweight..kg.>10000000,], aes(y=Netweight..kg., x=Partner)) + 
@@ -675,6 +674,45 @@ ggsave(here::here(output, "Phil_Fig4B.pdf"), width = 5.5, height = 6)
 
 
 # Figure 5.
+# CHILDREN (AGES 1-3)
+# all nutrients except Selenium (Philippines)
+ggplot(phil.hypothetical.child[!phil.hypothetical.child$nutrient=="Selenium",], 
+       aes(x=nutrient, y=people20, fill=nutrient, alpha=fleet)) + 
+  geom_bar(stat = "identity", color="grey40", size=0.3) +
+  scale_alpha_discrete(#range=c(0.1, 0.5, 1.0),
+    labels=c("Domestic","DWF (10%)", "DWF (30%)"),
+    breaks=c("Domestic","DWF (10%)", "DWF (30%)")) +
+  scale_y_continuous(labels = label_number(suffix = "", scale = 1e-3)) + # thousands
+  coord_flip() + 
+  xlab("") +
+  ylab("") +
+  #labs(title = "Round scads / Philippines") +
+  scale_fill_manual(values=c("#414487FF", "#2A788EFF", "#22A884FF", "#7AD151FF", "#FDE725FF", "goldenrod1")) +
+  theme_bw() +
+  guides(fill=FALSE) +
+  labs(alpha=NULL) +
+  theme(strip.text.x = element_text(size = 16), legend.position = c(0.85, 0.1))
+
+ggsave(here::here(output, "Phil_Fig5a-1.pdf"), width = 7, height = 7)
+
+# Selenium (Philippines)
+ggplot(phil.hypothetical.child[phil.hypothetical.child$nutrient=="Selenium",], 
+       aes(x=nutrient, y=people20, fill=nutrient, alpha=fleet)) + 
+  geom_bar(stat = "identity", color="grey40", size=0.3) +
+  scale_alpha_discrete(#range=c(0.1, 0.5, 1.0),
+    labels=c("Domestic","DWF (10%)", "DWF (30%)"),
+    breaks=c("Domestic","DWF (10%)", "DWF (30%)")) +
+  scale_y_continuous(labels = label_number(suffix = "", scale = 1e-3)) + # thousands
+  coord_flip() + 
+  xlab("") +
+  ylab("Number of children (thousands)") +
+  scale_fill_manual(values="#440154FF") +
+  theme_bw() + 
+  guides(fill=FALSE, alpha=FALSE) +
+  theme(strip.text.x = element_text(size = 14))
+
+ggsave(here::here(output, "Phil_Fig5a-2.pdf"), width = 7, height = 1.8)
+
 # FEMALES, REPRODUCTIVE AGE
 # all nutrients except Selenium (Philippines)
 ggplot(phil.hypothetical.Freproductive[!phil.hypothetical.Freproductive$nutrient=="Selenium",], 
