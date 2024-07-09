@@ -12,6 +12,7 @@ temp$fishing_sector <- ifelse(temp$Fleet=="DWF", "DWF", temp$fishing_sector)
 
 temp$fishing_sector <- factor(temp$fishing_sector, levels = c("Subsistence", "Artisanal", 
                                                               "Industrial", "DWF"))
+temp <- aggregate(tonnes~fishing_sector+year, data=temp, FUN=sum)
 
 ggplot(temp, 
        aes(fill=fishing_sector, y=tonnes, x=year)) + 
@@ -24,7 +25,7 @@ ggplot(temp,
   theme(legend.spacing.y = unit(0.5, 'cm'), legend.position="top") +
   labs(fill=NULL)
 
-ggsave(here::here(output, "Fig3a.pdf"), width = 5, height = 4)
+ggsave(here::here(output, "Fig3a.pdf"), width = 4.5, height = 4.5)
 
 neritic.nut.content <- nutrient_bar_child[nutrient_bar_child$stock=="Neritic tunas",]
 neritic.nut.content$demo <- "child"
@@ -46,9 +47,9 @@ ggplot(neritic.nut.content,
   theme_bw() +
   theme(text = element_text(size=14)) +
   labs(fill = NULL) +
-  theme(legend.position = c(0.8, 0.9))
+  theme(legend.position = c(0.75, 0.9))
 
-ggsave(here::here(output, "Fig3b.pdf"), width = 6, height = 6)
+ggsave(here::here(output, "Fig3b.pdf"), width = 5.5, height = 5.5)
 
 # all nutrients except Selenium (Child, Madagascar)
 ggplot(results.children[!results.children$nutrient=="Selenium" & results.children$stock=="Neritic tunas",], 
@@ -58,13 +59,15 @@ ggplot(results.children[!results.children$nutrient=="Selenium" & results.childre
   scale_y_continuous(labels = label_number(suffix = "", scale = 1e-3)) + # thousands
   coord_flip() + 
   xlab("") +
-  ylab("Number of children ages 1-3 (thousands)") +
-  labs(title = "Neritic tunas / Madagascar") +
+  ylab("") +
+  labs(title = "") +
   scale_fill_manual(values=c("#414487FF", "#2A788EFF", "#22A884FF", "#7AD151FF", "#FDE725FF", "goldenrod1")) +
-  theme_bw() + 
-  theme(strip.text.x = element_text(size = 14))
+  theme_bw() +
+  guides(fill=FALSE) +
+  labs(alpha=NULL) +
+  theme(strip.text.x = element_text(size = 16), legend.position = c(0.85, 0.1))
 
-ggsave(here::here(output, "Fig3c-1.pdf"), width = 7, height = 7)
+ggsave(here::here(output, "Fig3c-1.pdf"), width = 5, height = 5)
 
 # Selenium (Child, Madagascar)
 ggplot(results.children[results.children$nutrient=="Selenium" & results.children$stock=="Neritic tunas",], 
@@ -74,12 +77,13 @@ ggplot(results.children[results.children$nutrient=="Selenium" & results.children
   scale_y_continuous(labels = label_number(suffix = "", scale = 1e-3)) + # thousands
   coord_flip() + 
   xlab("") +
-  ylab("") +
+  ylab("Number of children ages 1-3 (thousands)") +
   scale_fill_manual(values="#440154FF") +
   theme_bw() + 
-  theme(strip.text.x = element_text(size = 14))
+  guides(fill=FALSE, alpha=FALSE) +
+  theme(strip.text.x = element_text(size = 16))
 
-ggsave(here::here(output, "Fig3c-2.pdf"), width = 7, height = 1.8)
+ggsave(here::here(output, "Fig3c-2.pdf"), width = 5, height = 1.3)
 
 
 
@@ -93,11 +97,12 @@ ggplot(roundscad_landings,
   geom_point() +
   xlab("") +
   ylab("Metric tonnes") +
-  ggtitle("Round scad landings (Philippines)") +
+  #ggtitle("Round scad landings (Philippines)") +
   scale_color_manual(values=c("orange3", "orange1")) +
-  theme_bw()
+  theme_bw() +
+  theme(legend.position = c(0.8, 0.85),legend.title=element_blank())
 
-ggsave(here::here(output, "Fig5a.pdf"), width = 7, height = 4)
+ggsave(here::here(output, "Fig5a.pdf"), width = 4, height = 2.666666)
 
 galunggong_prices <- read.csv(here::here(directory, "scad_price_PSAdata.csv"), sep=",", quote="", na.strings=c("NA", "", " "), header=TRUE)
 
@@ -113,11 +118,11 @@ ggplot(galunggong_prices, aes(x=Year, y=mean)) +
   xlab("") +
   ylab("Price (PhP) per kg") +
   ylim(0,200) +
-  ggtitle("Round scad retail price 2012-2021") +
+  #ggtitle("Round scad retail price 2012-2021") +
   theme_bw() +
   theme(text = element_text(size=14))
 
-ggsave(here::here(output, "Fig5b.pdf"), width = 6, height = 6)
+ggsave(here::here(output, "Fig5b.pdf"), width = 6, height = 5)
 
 # CHILDREN (AGES 1-3)
 # all nutrients except Selenium (Philippines)
@@ -138,7 +143,7 @@ ggplot(phil.hypothetical.child[!phil.hypothetical.child$nutrient=="Selenium",],
   labs(alpha=NULL) +
   theme(strip.text.x = element_text(size = 16), legend.position = c(0.85, 0.1))
 
-ggsave(here::here(output, "Fig5c-1.pdf"), width = 7, height = 7)
+ggsave(here::here(output, "Fig5c-1.pdf"), width = 5, height = 5)
 
 # Selenium (Philippines)
 ggplot(phil.hypothetical.child[phil.hypothetical.child$nutrient=="Selenium",], 
@@ -154,9 +159,9 @@ ggplot(phil.hypothetical.child[phil.hypothetical.child$nutrient=="Selenium",],
   scale_fill_manual(values="#440154FF") +
   theme_bw() + 
   guides(fill=FALSE, alpha=FALSE) +
-  theme(strip.text.x = element_text(size = 14))
+  theme(strip.text.x = element_text(size = 16))
 
-ggsave(here::here(output, "Fig5c-2.pdf"), width = 7, height = 1.8)
+ggsave(here::here(output, "Fig5c-2.pdf"), width = 5, height = 1.3)
 
 #### SUPPLEMENTARY ####
 
@@ -294,16 +299,20 @@ madagascar_pre <- madagascar_pre[madagascar_pre$common_name=="Kawakawa" |
 # there is one Regional entry for Reunion (France), 0.02 tonnes in Industrial landings of Narrow-barred Spanish mackerel
 madagascar_pre$Fleet <- ifelse(madagascar_pre$Fleet=="Regional", "DWF", madagascar_pre$Fleet)
 
+madagascar_pre <- aggregate(tonnes~common_name+Fleet+year, data=madagascar_pre, FUN=sum)
+
 ggplot(madagascar_pre, aes(x = Fleet, y = tonnes, fill = common_name)) +
   geom_bar(position = "stack", stat = "identity") +
   facet_wrap( ~ year) +
-  scale_fill_viridis(discrete=TRUE, option="viridis", direction=-1) + 
-  theme_bw()
+  scale_fill_viridis(discrete=TRUE, option="viridis", direction=-1) +
+  theme_bw() +
+  theme(legend.title=element_blank())
+
 
 ggsave(here::here(output, "Mada_Fig2.pdf"), width = 7, height = 5)
 
 # Figure 3.
-timeseries.plot <- SAU_landings
+timeseries.plot <- SAU_landings[SAU_landings$area_name=="Madagascar" & SAU_landings$common_name=="Neritic tunas",]
 
 # there is one Regional entry for Reunion (France), 0.02 tonnes in Industrial landings of Narrow-barred Spanish mackerel
 timeseries.plot$Fleet[timeseries.plot$area_name=="Madagascar" &
@@ -311,7 +320,9 @@ timeseries.plot$Fleet[timeseries.plot$area_name=="Madagascar" &
   ifelse(timeseries.plot$Fleet[timeseries.plot$area_name=="Madagascar" & timeseries.plot$common_name=="Neritic tunas"]=="Regional", "DWF", 
          timeseries.plot$Fleet[timeseries.plot$area_name=="Madagascar" & timeseries.plot$common_name=="Neritic tunas"])
 
-ggplot(timeseries.plot[timeseries.plot$area_name=="Madagascar" & timeseries.plot$common_name=="Neritic tunas",], 
+timeseries.plot <- aggregate(tonnes~year+Fleet, data=timeseries.plot, FUN=sum)
+
+ggplot(timeseries.plot, 
        aes(fill=Fleet, y=tonnes, x=year)) + 
   geom_bar(position="stack", stat="identity") +
   xlab("") +
@@ -324,8 +335,8 @@ ggsave(here::here(output, "Mada_Fig3.pdf"), width = 7, height = 6)
 
 
 # Figure 4. 
-ggplot(SAU_landings[SAU_landings$area_name=="Madagascar" & SAU_landings$common_name=="Neritic tunas" &
-                      !SAU_landings$Fleet=="Domestic",], 
+ggplot(aggregate(tonnes~year+fishing_entity, data=SAU_landings[SAU_landings$area_name=="Madagascar" & SAU_landings$common_name=="Neritic tunas" &
+                      !SAU_landings$Fleet=="Domestic",], FUN=sum), 
        aes(fill=fishing_entity, y=tonnes, x=year)) + 
   geom_bar(position="stack", stat="identity") +
   xlab("") +
@@ -338,8 +349,8 @@ ggsave(here::here(output, "Mada_Fig4.pdf"), width = 7, height = 5)
 
 
 # Figure 5. 
-ggplot(SAU_landings[SAU_landings$area_name=="Madagascar" & SAU_landings$common_name=="Neritic tunas" &
-                     SAU_landings$Fleet=="Domestic",], 
+ggplot(aggregate(tonnes~fishing_sector+year, data=SAU_landings[SAU_landings$area_name=="Madagascar" & SAU_landings$common_name=="Neritic tunas" &
+                     SAU_landings$Fleet=="Domestic",], FUN=sum), 
        aes(fill=fishing_sector, y=tonnes, x=year)) + 
   geom_bar(position="stack", stat="identity") +
   xlab("") +
@@ -453,8 +464,8 @@ ggsave(here::here(output, "Mada_Fig7B-2.pdf"), width = 7, height = 1.8)
 # Peru full-length case narrative ####
 
 # Figure 1.
-ggplot(SAU_landings[SAU_landings$area_name=="Peru" & SAU_landings$common_name=="Jumbo flying squid" &
-                      SAU_landings$Fleet=="Domestic",], 
+ggplot(aggregate(tonnes~reporting_status+year, data=SAU_landings[SAU_landings$area_name=="Peru" & SAU_landings$common_name=="Jumbo flying squid" &
+                      SAU_landings$Fleet=="Domestic",], FUN=sum), 
        aes(fill=reporting_status, y=tonnes, x=year)) + 
   geom_bar(position="stack", stat="identity") +
   xlab("") +
