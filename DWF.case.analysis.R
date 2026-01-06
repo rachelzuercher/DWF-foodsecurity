@@ -140,9 +140,9 @@ RNI$Protein_g_day <- c(9.1,9.1,11.0,11.0,13,13,19,19,19,19,40,43,46,56,46,56,46,
 # protein values for age brackets 9-13 and 14-18 were averaged for the RNI.RDA ages 10-18 bracket
 # protein values for age brackets 19-30 and 31-50 were averaged for the RNI.RDA ages 19-50 bracket
 
-RNI$Omega3_PUFA_g_day <- 1.1 # this is the adequate daily intake value used in Nash et al. 2022 citing:
-# Institute of Medicine (2005) Dietary reference intakes for energy, carbohydrate, fiber, fat,
-# fatty acids, cholesterol, protein, and amino acids (National Academy Press: Washington, DC, USA).
+RNI$Omega3_PUFA_g_day <- 0.5 # this is the upper limit of the dietery reference intake of 250-500 mg/day
+# Citation: Kris-Etherton, P.M., Grieger, J.A., Etherton, T.D. Dietary reference intakes for DHA and
+# EPA. Prostaglandins, Leukotrienes and Essential Fatty Acids. 81: 99-104 (2009).
 
 # Create a dataframe for RNI for females of reproductive age
 RNI_F_reproductive <- RNI[RNI$Sex=="F" & RNI$Age=="19-50 years",]
