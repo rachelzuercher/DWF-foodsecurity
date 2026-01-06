@@ -5,7 +5,7 @@
 
 This repository includes data and analysis scripts for the following peer-review publication:
 
-**Zuercher, R., Andriamahefazafy, M., Gorospe, K.D., Iannotti, L.L., Gozzer-Wuest, R., Uychiacoc, A., Humphries, A.T. Distant water fishing and its effects on domestic nutritional security. Submitted to npj Ocean Sustainability** [ADD URL ONCE AVAILABLE]
+**Zuercher, R., Andriamahefazafy, M., Gorospe, K.D., Iannotti, L.L., Gozzer-Wuest, R., Uychiaoco, A., Humphries, A.T. 2026. Distant water fishing and its effects on domestic nutritional security. npj Ocean Sustainability** [ADD URL ONCE AVAILABLE]
 
 ---
 ## Abstract:
