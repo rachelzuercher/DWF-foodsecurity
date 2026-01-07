@@ -534,10 +534,10 @@ ggsave(here::here(output, "Peru_Fig3B.pdf"), width = 5.5, height = 6)
 # Figure 4. 
 # CHILDREN (AGES 1-3)
 # all nutrients except Selenium (Peru)
-ggplot(results.children[!results.children$nutrient=="Selenium" & results.children$stock=="Jumbo flying squid",], 
-       aes(x=nutrient, y=people20, fill=nutrient, alpha=fleet)) + 
+ggplot(results.children[!results.children$nutrient=="Selenium" & results.children$stock=="Jumbo flying squid" &
+                          results.children$fleet != "DWF",], 
+       aes(x=nutrient, y=people20, fill=nutrient)) + 
   geom_bar(stat = "identity") +
-  scale_alpha_discrete(range=c(0.5, 1)) +
   scale_y_continuous(labels = label_number(suffix = "", scale = 1e-3)) + # thousands
   coord_flip() + 
   xlab("") +
@@ -546,24 +546,24 @@ ggplot(results.children[!results.children$nutrient=="Selenium" & results.childre
   scale_fill_manual(values=c("#414487FF", "#2A788EFF", "#22A884FF", "#7AD151FF", "#FDE725FF", "goldenrod1")) +
   theme_bw() +
   guides(fill=FALSE) +
-  labs(alpha=NULL) +
   theme(strip.text.x = element_text(size = 16), legend.position = c(0.85, 0.1))
 
 ggsave(here::here(output, "Peru_Fig4A-1.pdf"), width = 5, height = 5)
 
 
 # Selenium (Peru)
-ggplot(results.children[results.children$nutrient=="Selenium" & results.children$stock=="Jumbo flying squid",], 
-       aes(x=nutrient, y=people20, fill=nutrient, alpha=fleet)) + 
+ggplot(results.children[results.children$nutrient=="Selenium" & results.children$stock=="Jumbo flying squid" &
+                          results.children$fleet != "DWF",], 
+       aes(x=nutrient, y=people20, fill=nutrient)) + 
   geom_bar(stat = "identity") +
-  scale_alpha_discrete(range=c(0.5, 1)) +
+  scale_alpha_discrete(range=c(0, 1)) +
   scale_y_continuous(labels = label_number(suffix = "", scale = 1e-3)) + # thousands
   coord_flip() + 
   xlab("") +
   ylab("Number of children ages 1-3 (thousands)") +
   scale_fill_manual(values="#440154FF") +
   theme_bw() +
-  guides(fill=FALSE, alpha=FALSE) +
+  guides(fill=FALSE) +
   theme(strip.text.x = element_text(size = 16))
 
 ggsave(here::here(output, "Peru_Fig4A-2.pdf"), width = 5, height = 1.3)
@@ -571,10 +571,11 @@ ggsave(here::here(output, "Peru_Fig4A-2.pdf"), width = 5, height = 1.3)
 
 # FEMALES OF REPRODUCTIVE AGE (19-50)
 # all nutrients except Selenium (Peru)
-ggplot(results.Freproductive[!results.Freproductive$nutrient=="Selenium" & results.Freproductive$stock=="Jumbo flying squid",], 
-       aes(x=nutrient, y=people20, fill=nutrient, alpha=fleet)) + 
+ggplot(results.Freproductive[!results.Freproductive$nutrient=="Selenium" & results.Freproductive$stock=="Jumbo flying squid" &
+                               results.Freproductive$fleet != "DWF",], 
+       aes(x=nutrient, y=people20, fill=nutrient)) + 
   geom_bar(stat = "identity") +
-  scale_alpha_discrete(range=c(0.5, 1)) +
+  scale_alpha_discrete(range=c(0, 1)) +
   scale_y_continuous(labels = label_number(suffix = "", scale = 1e-3)) + # thousands
   coord_flip() + 
   xlab("") +
@@ -583,23 +584,23 @@ ggplot(results.Freproductive[!results.Freproductive$nutrient=="Selenium" & resul
   scale_fill_manual(values=c("#414487FF", "#2A788EFF", "#22A884FF", "#7AD151FF", "#FDE725FF", "goldenrod1")) +
   theme_bw() +
   guides(fill=FALSE) +
-  labs(alpha=NULL) +
   theme(strip.text.x = element_text(size = 16), legend.position = c(0.85, 0.1))
 
 ggsave(here::here(output, "Peru_Fig4B-1.pdf"), width = 5, height = 5)
 
 # Selenium (Peru)
-ggplot(results.Freproductive[results.Freproductive$nutrient=="Selenium" & results.Freproductive$stock=="Jumbo flying squid",], 
-       aes(x=nutrient, y=people20, fill=nutrient, alpha=fleet)) + 
+ggplot(results.Freproductive[results.Freproductive$nutrient=="Selenium" & results.Freproductive$stock=="Jumbo flying squid" &
+                               results.Freproductive$fleet != "DWF",], 
+       aes(x=nutrient, y=people20, fill=nutrient)) + 
   geom_bar(stat = "identity") +
-  scale_alpha_discrete(range=c(0.5, 1)) +
+  scale_alpha_discrete(range=c(0, 1)) +
   scale_y_continuous(labels = label_number(suffix = "", scale = 1e-3)) + # thousands
   coord_flip() + 
   xlab("") +
   ylab("Number of females ages 19-50 (thousands)") +
   scale_fill_manual(values="#440154FF") +
   theme_bw() +
-  guides(fill=FALSE, alpha=FALSE) +
+  guides(fill=FALSE) +
   theme(strip.text.x = element_text(size = 16))
 
 ggsave(here::here(output, "Peru_Fig4B-2.pdf"), width = 5, height = 1.3)
