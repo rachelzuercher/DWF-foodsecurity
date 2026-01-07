@@ -402,13 +402,15 @@ ggplot(results.children[!results.children$nutrient=="Selenium" & results.childre
   scale_y_continuous(labels = label_number(suffix = "", scale = 1e-3)) + # thousands
   coord_flip() + 
   xlab("") +
-  ylab("Number of children ages 1-3 (thousands)") +
-  labs(title = "Neritic tunas / Madagascar") +
+  ylab("") +
+  labs(title = "") +
   scale_fill_manual(values=c("#414487FF", "#2A788EFF", "#22A884FF", "#7AD151FF", "#FDE725FF", "goldenrod1")) +
-  theme_bw() + 
-  theme(strip.text.x = element_text(size = 14))
+  theme_bw() +
+  guides(fill=FALSE) +
+  labs(alpha=NULL) +
+  theme(strip.text.x = element_text(size = 16), legend.position = c(0.85, 0.1))
 
-ggsave(here::here(output, "Mada_Fig7A-1.pdf"), width = 7, height = 7)
+ggsave(here::here(output, "Mada_Fig7A-1.pdf"), width = 5, height = 5)
 
 
 # Selenium (Madagascar)
@@ -419,12 +421,13 @@ ggplot(results.children[results.children$nutrient=="Selenium" & results.children
   scale_y_continuous(labels = label_number(suffix = "", scale = 1e-3)) + # thousands
   coord_flip() + 
   xlab("") +
-  ylab("") +
+  ylab("Number of children ages 1-3 (thousands)") +
   scale_fill_manual(values="#440154FF") +
-  theme_bw() + 
-  theme(strip.text.x = element_text(size = 14))
+  theme_bw() +
+  guides(fill=FALSE, alpha=FALSE) +
+  theme(strip.text.x = element_text(size = 16))
 
-ggsave(here::here(output, "Mada_Fig7A-2.pdf"), width = 7, height = 1.8)
+ggsave(here::here(output, "Mada_Fig7A-2.pdf"), width = 5, height = 1.3)
 
 
 # FEMALES OF REPRODUCTIVE AGE (19-50)
@@ -436,13 +439,15 @@ ggplot(results.Freproductive[!results.Freproductive$nutrient=="Selenium" & resul
   scale_y_continuous(labels = label_number(suffix = "", scale = 1e-3)) + # thousands
   coord_flip() + 
   xlab("") +
-  ylab("Number of females ages 19-50 (thousands)") +
-  labs(title = "Neritic tunas / Madagascar") +
+  ylab("") +
+  labs(title = "") +
   scale_fill_manual(values=c("#414487FF", "#2A788EFF", "#22A884FF", "#7AD151FF", "#FDE725FF", "goldenrod1")) +
-  theme_bw() + 
-  theme(strip.text.x = element_text(size = 14))
+  theme_bw() +
+  guides(fill=FALSE) +
+  labs(alpha=NULL) +
+  theme(strip.text.x = element_text(size = 16), legend.position = c(0.85, 0.1))
 
-ggsave(here::here(output, "Mada_Fig7B-1.pdf"), width = 7, height = 7)
+ggsave(here::here(output, "Mada_Fig7B-1.pdf"), width = 5, height = 5)
 
 # Selenium (Madagascar)
 ggplot(results.Freproductive[results.Freproductive$nutrient=="Selenium" & results.Freproductive$stock=="Neritic tunas",], 
@@ -452,12 +457,13 @@ ggplot(results.Freproductive[results.Freproductive$nutrient=="Selenium" & result
   scale_y_continuous(labels = label_number(suffix = "", scale = 1e-3)) + # thousands
   coord_flip() + 
   xlab("") +
-  ylab("") +
+  ylab("Number of females ages 19-50 (thousands)") +
   scale_fill_manual(values="#440154FF") +
-  theme_bw() + 
-  theme(strip.text.x = element_text(size = 14))
+  theme_bw() +
+  guides(fill=FALSE, alpha=FALSE) +
+  theme(strip.text.x = element_text(size = 16))
 
-ggsave(here::here(output, "Mada_Fig7B-2.pdf"), width = 7, height = 1.8)
+ggsave(here::here(output, "Mada_Fig7B-2.pdf"), width = 5, height = 1.3)
 
 
 
@@ -535,13 +541,15 @@ ggplot(results.children[!results.children$nutrient=="Selenium" & results.childre
   scale_y_continuous(labels = label_number(suffix = "", scale = 1e-3)) + # thousands
   coord_flip() + 
   xlab("") +
-  ylab("Number of children ages 1-3 (thousands)") +
-  labs(title = "Jumbo flying squid / Peru") +
+  ylab("") +
+  labs(title = "") +
   scale_fill_manual(values=c("#414487FF", "#2A788EFF", "#22A884FF", "#7AD151FF", "#FDE725FF", "goldenrod1")) +
-  theme_bw() + 
-  theme(strip.text.x = element_text(size = 14))
+  theme_bw() +
+  guides(fill=FALSE) +
+  labs(alpha=NULL) +
+  theme(strip.text.x = element_text(size = 16), legend.position = c(0.85, 0.1))
 
-ggsave(here::here(output, "Peru_Fig4A-1.pdf"), width = 7, height = 7)
+ggsave(here::here(output, "Peru_Fig4A-1.pdf"), width = 5, height = 5)
 
 
 # Selenium (Peru)
@@ -552,12 +560,13 @@ ggplot(results.children[results.children$nutrient=="Selenium" & results.children
   scale_y_continuous(labels = label_number(suffix = "", scale = 1e-3)) + # thousands
   coord_flip() + 
   xlab("") +
-  ylab("") +
+  ylab("Number of children ages 1-3 (thousands)") +
   scale_fill_manual(values="#440154FF") +
-  theme_bw() + 
-  theme(strip.text.x = element_text(size = 14))
+  theme_bw() +
+  guides(fill=FALSE, alpha=FALSE) +
+  theme(strip.text.x = element_text(size = 16))
 
-ggsave(here::here(output, "Peru_Fig4A-2.pdf"), width = 7, height = 1.8)
+ggsave(here::here(output, "Peru_Fig4A-2.pdf"), width = 5, height = 1.3)
 
 
 # FEMALES OF REPRODUCTIVE AGE (19-50)
@@ -569,13 +578,15 @@ ggplot(results.Freproductive[!results.Freproductive$nutrient=="Selenium" & resul
   scale_y_continuous(labels = label_number(suffix = "", scale = 1e-3)) + # thousands
   coord_flip() + 
   xlab("") +
-  ylab("Number of females ages 19-50 (thousands)") +
-  labs(title = "Jumbo flying squid / Peru") +
+  ylab("") +
+  labs(title = "") +
   scale_fill_manual(values=c("#414487FF", "#2A788EFF", "#22A884FF", "#7AD151FF", "#FDE725FF", "goldenrod1")) +
-  theme_bw() + 
-  theme(strip.text.x = element_text(size = 14))
+  theme_bw() +
+  guides(fill=FALSE) +
+  labs(alpha=NULL) +
+  theme(strip.text.x = element_text(size = 16), legend.position = c(0.85, 0.1))
 
-ggsave(here::here(output, "Peru_Fig4B-1.pdf"), width = 7, height = 7)
+ggsave(here::here(output, "Peru_Fig4B-1.pdf"), width = 5, height = 5)
 
 # Selenium (Peru)
 ggplot(results.Freproductive[results.Freproductive$nutrient=="Selenium" & results.Freproductive$stock=="Jumbo flying squid",], 
@@ -585,12 +596,13 @@ ggplot(results.Freproductive[results.Freproductive$nutrient=="Selenium" & result
   scale_y_continuous(labels = label_number(suffix = "", scale = 1e-3)) + # thousands
   coord_flip() + 
   xlab("") +
-  ylab("") +
+  ylab("Number of females ages 19-50 (thousands)") +
   scale_fill_manual(values="#440154FF") +
-  theme_bw() + 
-  theme(strip.text.x = element_text(size = 14))
+  theme_bw() +
+  guides(fill=FALSE, alpha=FALSE) +
+  theme(strip.text.x = element_text(size = 16))
 
-ggsave(here::here(output, "Peru_Fig4B-2.pdf"), width = 7, height = 1.8)
+ggsave(here::here(output, "Peru_Fig4B-2.pdf"), width = 5, height = 1.3)
 
 
 # Philippines full-length case narrative ####
@@ -704,7 +716,7 @@ ggplot(phil.hypothetical.child[!phil.hypothetical.child$nutrient=="Selenium",],
   labs(alpha=NULL) +
   theme(strip.text.x = element_text(size = 16), legend.position = c(0.85, 0.1))
 
-ggsave(here::here(output, "Phil_Fig5a-1.pdf"), width = 7, height = 7)
+ggsave(here::here(output, "Phil_Fig5a-1.pdf"), width = 5, height = 5)
 
 # Selenium (Philippines)
 ggplot(phil.hypothetical.child[phil.hypothetical.child$nutrient=="Selenium",], 
@@ -716,13 +728,13 @@ ggplot(phil.hypothetical.child[phil.hypothetical.child$nutrient=="Selenium",],
   scale_y_continuous(labels = label_number(suffix = "", scale = 1e-3)) + # thousands
   coord_flip() + 
   xlab("") +
-  ylab("Number of children (thousands)") +
+  ylab("Number of children ages 1-3 (thousands)") +
   scale_fill_manual(values="#440154FF") +
   theme_bw() + 
   guides(fill=FALSE, alpha=FALSE) +
-  theme(strip.text.x = element_text(size = 14))
+  theme(strip.text.x = element_text(size = 16))
 
-ggsave(here::here(output, "Phil_Fig5a-2.pdf"), width = 7, height = 1.8)
+ggsave(here::here(output, "Phil_Fig5a-2.pdf"), width = 5, height = 1.3)
 
 # FEMALES, REPRODUCTIVE AGE
 # all nutrients except Selenium (Philippines)
@@ -743,7 +755,7 @@ ggplot(phil.hypothetical.Freproductive[!phil.hypothetical.Freproductive$nutrient
   labs(alpha=NULL) +
   theme(strip.text.x = element_text(size = 16), legend.position = c(0.85, 0.1))
 
-ggsave(here::here(output, "Phil_Fig5b-1.pdf"), width = 7, height = 7)
+ggsave(here::here(output, "Phil_Fig5b-1.pdf"), width = 5, height = 5)
 
 # Selenium (Philippines)
 ggplot(phil.hypothetical.Freproductive[phil.hypothetical.Freproductive$nutrient=="Selenium",], 
@@ -755,11 +767,11 @@ ggplot(phil.hypothetical.Freproductive[phil.hypothetical.Freproductive$nutrient=
   scale_y_continuous(labels = label_number(suffix = "", scale = 1e-3)) + # thousands
   coord_flip() + 
   xlab("") +
-  ylab("Number of women (thousands)") +
+  ylab("Number of females ages 19-50 (thousands)") +
   scale_fill_manual(values="#440154FF") +
   theme_bw() + 
   guides(fill=FALSE, alpha=FALSE) +
-  theme(strip.text.x = element_text(size = 14))
+  theme(strip.text.x = element_text(size = 16))
 
-ggsave(here::here(output, "Phil_Fig5b-2.pdf"), width = 7, height = 7)
+ggsave(here::here(output, "Phil_Fig5b-2.pdf"), width = 5, height = 1.3)
 
